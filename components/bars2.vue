@@ -33,12 +33,12 @@
 const bars = [1, 2, 3, 4, 5];
 
 const barClasses = (index) => {
-  return ["bg-lime", "w-1/5", "min-h-64", "animate-bar-pulse"];
+  return ["bg-lime", "w-1/5", "min-h-64", "animate-bar-wave"];
 };
 
 const barStyle = (index) => {
-  const delay = Math.random() * 0.5; // Random delay between 0 and 2 seconds
-  const height = 200 + Math.random() * 100; // More varied height between 150px and 250px
+  const delay = index * 0.2; // Increasing delay for wave effect
+  const height = 200 + Math.random() * 100; // More varied height between 200px and 300px
   return {
     animationDelay: `${delay}s`,
     height: `${height}px`,
@@ -47,18 +47,18 @@ const barStyle = (index) => {
 </script>
 
 <style scoped>
-@keyframes barPulse {
+@keyframes barWave {
   0%,
-  100% {
+  120% {
     transform: scaleY(1);
   }
-  20% {
+  30% {
     transform: scaleY(2); /* Scale up to twice the size */
   }
 }
 
-.animate-bar-pulse {
-  animation: barPulse 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+.animate-bar-wave {
+  animation: barWave 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .wallpaper {

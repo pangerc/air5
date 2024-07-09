@@ -18,7 +18,7 @@
       <p>INVENTING THE</p>
       <p class="text-lime">FUTURE OF CABLE</p>
     </div>
-    <div class="absolute bottom-0 flex w-full h-1/3 items-end px-10">
+    <div class="absolute bottom-0 flex w-full h-1/3 items-end px-10 space-x-1">
       <div
         v-for="(bar, index) in bars"
         :key="index"
@@ -37,7 +37,7 @@ const barClasses = (index) => {
 };
 
 const barStyle = (index) => {
-  const delay = index * 0.2; // Increasing delay for wave effect
+  const delay = index * 0.5; // Increasing delay for wave effect
   const height = 200 + Math.random() * 100; // More varied height between 200px and 300px
   return {
     animationDelay: `${delay}s`,
@@ -49,10 +49,10 @@ const barStyle = (index) => {
 <style scoped>
 @keyframes barWave {
   0%,
-  120% {
+  150% {
     transform: scaleY(1);
   }
-  30% {
+  70% {
     transform: scaleY(2); /* Scale up to twice the size */
   }
 }

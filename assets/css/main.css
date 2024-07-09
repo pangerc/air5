@@ -1,0 +1,188 @@
+
+
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-ExtraLightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'N27';
+    src: url('~/assets/fonts/N27/N27-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-ExtraLightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Strawford';
+    src: url('~/assets/fonts/Strawford/Strawford-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

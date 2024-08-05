@@ -1,6 +1,8 @@
 <template>
-  <Bars />
+  <Hero />
+  <Footer />
 </template>
 <script setup>
-import Bars from "~/components/bars2.vue";
+import Hero from "~/components/hero3.vue";
+import Footer from "~/components/footer.vue";
 </script>

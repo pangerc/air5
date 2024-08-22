@@ -51,36 +51,36 @@ const props = defineProps({
 });
 
 const posts = ref([
-  {
-    id: 1,
-    title: "Boost your conversion rate",
-    href: "#",
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.",
-    date: "Aug 22, 2024",
-    datetime: "2024-08-22",
-    outlet: "WSJ",
-  },
-  {
-    id: 2,
-    title: "How to use search engine optimization to drive sales",
-    href: "#",
-    description:
-      "Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.",
-    date: "Mar 10, 2024",
-    datetime: "2024-03-10",
-    outlet: "TechCrunch",
-  },
-  {
-    id: 3,
-    title: "Improve your customer experience",
-    href: "#",
-    description:
-      "Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis.",
-    date: "Feb 12, 2024",
-    datetime: "2024-02-12",
-    outlet: "Forbes",
-  },
+  // {
+  //   id: 1,
+  //   title: "Boost your conversion rate",
+  //   href: "#",
+  //   description:
+  //     "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.",
+  //   date: "Aug 22, 2024",
+  //   datetime: "2024-08-22",
+  //   outlet: "WSJ",
+  // },
+  // {
+  //   id: 2,
+  //   title: "How to use search engine optimization to drive sales",
+  //   href: "#",
+  //   description:
+  //     "Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.",
+  //   date: "Mar 10, 2024",
+  //   datetime: "2024-03-10",
+  //   outlet: "TechCrunch",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Improve your customer experience",
+  //   href: "#",
+  //   description:
+  //     "Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis.",
+  //   date: "Feb 12, 2024",
+  //   datetime: "2024-02-12",
+  //   outlet: "Forbes",
+  // },
   // You can add more posts here
 ]);
 

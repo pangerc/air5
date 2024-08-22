@@ -3,17 +3,12 @@
     <article
       v-for="post in displayedPosts"
       :key="post.url"
-      class="flex max-w-xl flex-col items-start justify-between mb-4"
+      class="flex max-w-xl flex-col items-start justify-between mb-8"
     >
       <div class="flex items-center gap-x-4 text-xs">
         <time :datetime="post.date" class="text-gray-500">{{
           formatDate(post.date)
         }}</time>
-        <div
-          class="relative z-10 rounded-full bg-gray-500 px-3 py-1.5 font-medium text-gray-700 hover:bg-gray-100"
-        >
-          {{ post.publication }}
-        </div>
       </div>
       <div class="group relative">
         <h3
@@ -29,6 +24,12 @@
             {{ post.title }}
           </a>
         </h3>
+        <div
+          class="font-light text-xs text-gray-300 mt-3 uppercase italic flex"
+        >
+          {{ post.publication }}
+          <img src="/img/arrow_up_w.svg" class="w-3 h-3 ml-1" />
+        </div>
       </div>
     </article>
     <div v-if="showReadMore" class="mt-4">

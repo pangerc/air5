@@ -1,6 +1,6 @@
 <template>
   <section class="py-32 bg-cover">
-    <div class="container mx-auto max-w-5xl">
+    <div class="container mx-auto max-w-7xl">
       <h2>Why 5G in Cable</h2>
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-24 mx-4"

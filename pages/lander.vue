@@ -102,7 +102,7 @@ const leadership = ref([
     name: "Lorenz Glatz",
     role: "Co-Founder",
     imageUrl: "/team/lorenz.png",
-    bio: "former CTO of Kabel Deutschland (Vodafone) and SVP of Design and Architecture at Liberty Global, is considered one of the brightest technical luminaries in cable operator world and is responsible for a number of the most important developments in the industry.",
+    bio: "former CTO of Kabel Deutschland (Vodafone), then Europe's biggest cable operator, and SVP of Design and Architecture at Liberty Global, is a vital contributor to a number of the key developments in the industry.",
     linkedinUrl: "https://www.linkedin.com/in/lorenzglatz/",
   },
   {

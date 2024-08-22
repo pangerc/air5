@@ -20,7 +20,7 @@
       <article>
         <div class="text-sm text-lime font-n27">R&D Center</div>
         <div class="text-lg text-white font-medium">AIR Europe</div>
-        <p class="pt-2">Zagrebska 102 <br />2000 Maribor, Slovenia</p>
+        <p class="pt-2">Vienna, Austria</p>
       </article>
     </div>
   </section>

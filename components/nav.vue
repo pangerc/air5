@@ -124,6 +124,8 @@ const closeMobileMenu = () => {
 };
 
 const handleNavClick = (event, item) => {
+  closeMobileMenu();
+
   if (item.href.startsWith("#")) {
     event.preventDefault();
     const targetId = item.href.substring(1);
@@ -131,27 +133,28 @@ const handleNavClick = (event, item) => {
     if (isHomePage.value) {
       scrollToElement(targetId);
     } else {
-      router.push("/").then(() => {
-        // Wait for route change and DOM update
-        setTimeout(() => scrollToElement(targetId), 100);
-      });
+      router.push({ path: "/", hash: `#${targetId}` });
     }
   }
-
-  // Close the mobile menu
-  closeMobileMenu();
 };
 
 const scrollToElement = (targetId) => {
-  const targetElement = document.getElementById(targetId);
-  if (targetElement) {
-    setTimeout(() => {
+  setTimeout(() => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
       targetElement.scrollIntoView({
         behavior: "smooth",
         block: "start",
         inline: "nearest",
       });
-    }, 100); // Small delay to ensure DOM is ready
-  }
+    }
+  }, 100); // Small delay to ensure DOM is ready
 };
+
+// Watch for route changes
+router.afterEach((to) => {
+  if (to.hash) {
+    scrollToElement(to.hash.slice(1));
+  }
+});
 </script>

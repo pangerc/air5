@@ -19,7 +19,7 @@
     </h2>
     <Team :people="advisory" />
   </section>
-  <section class="container mx-auto py-32">
+  <section class="container mx-auto max-w-5xl py-32">
     <h2 class="mx-4">Newsroom</h2>
     <div class="md:flex w-full py-12 md:space-x-12">
       <div class="w-full md:w-2/3">

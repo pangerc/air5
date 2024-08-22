@@ -1,7 +1,7 @@
 <template>
   <section class="bg-cover py-24 lg:py-32 bg-bottom" id="solution">
     <div class="container mx-auto">
-      <div class="lg:w-1/2 mx-4">
+      <div class="md:max-w-xl mx-4">
         <h2 class="text-left">
           Inventing a Shared Future for Cable and Wireless
         </h2>
@@ -10,7 +10,7 @@
           network infrastructure, providing a seamless path to deploy new
           technology while supporting legacy solutions.
         </h4>
-        <div class="md:grid grid-cols-2 gap-x-4 mt-8 space-y-8 md:space-y-0">
+        <div class="md:grid grid-cols-2 md:gap-x-6 mt-8 space-y-8 md:space-y-0">
           <article>
             <h3>BIGGER ECONOMIES OF SCALE</h3>
             <p class="pt-2">
@@ -20,11 +20,11 @@
             </p>
           </article>
           <article>
-            <h3>BIGGER ECONOMIES OF SCALE</h3>
+            <h3>BRIDGING CABLE AND WIRELESS</h3>
             <p class="pt-2">
-              leveraging the substantially bigger economies of scale and
-              innovation of the 5G / wireless eco system for the cable world in
-              addition to Docsis.
+              seamless service integration between cable and 5G enables
+              innovative new integrated service offerings as well as substantial
+              cost savings in OSS/BSS for cable operators.
             </p>
           </article>
         </div>

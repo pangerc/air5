@@ -2,7 +2,7 @@
 <template>
   <main class="bg-scuro min-h-screen flex flex-col justify-between">
     <Nav />
-    <section class="pt-64 container mx-auto">
+    <section class="py-64 container mx-auto">
       <h1
         class="text-5xl md:text-6xl font-n27 font-light italic text-white text-center"
       >

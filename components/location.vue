@@ -1,6 +1,6 @@
 <template>
   <section
-    class="py-12 md:py-24 lg:py-32 container mx-auto flex flex-col items-center justify-center"
+    class="py-12 md:py-24 lg:py-32 container mx-auto flex flex-col items-center justify-center max-w-5xl"
     id="company"
   >
     <h2>Company</h2>

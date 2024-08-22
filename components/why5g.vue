@@ -1,6 +1,6 @@
 <template>
   <section class="py-32 bg-cover">
-    <div class="container mx-auto">
+    <div class="container mx-auto max-w-5xl">
       <h2>Why 5G in Cable</h2>
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-24 mx-4"
@@ -27,23 +27,20 @@
 const items = [
   {
     title: "DOCSIS IS FACING ITS LIMITS",
-    description: "Risk of fragmentation could dilute R&D base",
+    description:
+      "Risk of fragmentation and operators overbuilding themselves with fiber could dilute.",
   },
   {
     title: "A BIGGER PIE",
     description:
-      "The current spend on 5G and 6G R&D is quite large. Extending the technology to cable will bring new vendors into the space.",
+      "The current spend on 5G and 6G is massive. Extending the technology to cable will bring new vendors into the space.",
   },
   {
     title: "BIGGER INNOVATION SPACE",
     description:
       "Adding the substantial capabilities of the cable ecosystem to the 5G ecosystem would create a powerhouse for innovation.",
   },
-  {
-    title: "VALUE MAXIMIZATION",
-    description:
-      "Creating a cable specific 3GPP branch for 5G that was managed by the cable industry maximizes value.",
-  },
+
   {
     title: "BETTER SERVING THE CUSTOMER",
     description:

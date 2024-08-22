@@ -15,8 +15,8 @@
             <h3>BIGGER ECONOMIES OF SCALE</h3>
             <p class="pt-2">
               leveraging the substantially bigger economies of scale and
-              innovation of the 5G / wireless eco system for the cable world in
-              addition to Docsis.
+              potential innovation of the 5G / wireless eco system for the cable
+              world in addition to Docsis.
             </p>
           </article>
           <article>

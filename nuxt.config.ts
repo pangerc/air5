@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    googleServiceAccountEmail: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+    googlePrivateKey: process.env.GOOGLE_PRIVATE_KEY,
+  },
   app: {
     head: {
       titleTemplate: "AIR5",

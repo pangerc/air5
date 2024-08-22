@@ -24,9 +24,10 @@ export default {
         },
         lime: {
           light: "#EEF6A3",
-          DEFAULT: "#E8F580",
+          DEFAULT: "#E6F56B",
           lighter: "#F8FDBD",
         },
+        scuro: "#232323",
       },
     },
   },

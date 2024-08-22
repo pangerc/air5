@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     googleServiceAccountEmail: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
     googlePrivateKey: process.env.GOOGLE_PRIVATE_KEY,
+    googleSheetId: process.env.GOOGLE_SHEET_ID,
   },
   app: {
     head: {

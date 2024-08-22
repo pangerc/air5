@@ -6,7 +6,9 @@
       class="flex max-w-xl flex-col items-start justify-between mb-4"
     >
       <div class="flex items-center gap-x-4 text-xs">
-        <time :datetime="post.date" class="text-gray-500">{{ post.date }}</time>
+        <time :datetime="post.date" class="text-gray-500">{{
+          formatDate(post.date)
+        }}</time>
         <div
           class="relative z-10 rounded-full bg-gray-500 px-3 py-1.5 font-medium text-gray-700 hover:bg-gray-100"
         >
@@ -27,7 +29,6 @@
             {{ post.title }}
           </a>
         </h3>
-        <!-- Remove description if not available in your Google Sheet -->
       </div>
     </article>
     <div v-if="showReadMore" class="mt-4">
@@ -43,7 +44,6 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import { useGoogleSheets } from "~/composables/useGoogleSheets";
 
 const props = defineProps({
   limit: {
@@ -52,21 +52,15 @@ const props = defineProps({
   },
 });
 
-const { fetchSheetData } = useGoogleSheets();
-
 const posts = ref([]);
 
-const fetchPosts = async () => {
-  try {
-    const sheetId = "1izPvLPl744unOOhCdgGDOeuibUgwesIVpi7l4MjC5EM";
-    posts.value = await fetchSheetData(sheetId);
-  } catch (error) {
-    console.error("Error fetching data from Google Sheets:", error);
-  }
-};
+const { data: fetchedPosts, error } = await useFetch("/api/mentions");
 
-// Fetch posts when component is mounted
-fetchPosts();
+if (error.value) {
+  console.error("Error fetching mentions:", error.value);
+} else {
+  posts.value = fetchedPosts.value;
+}
 
 const displayedPosts = computed(() => {
   return posts.value.slice(0, props.limit);
@@ -75,4 +69,9 @@ const displayedPosts = computed(() => {
 const showReadMore = computed(() => {
   return posts.value.length > props.limit;
 });
+
+const formatDate = (dateString) => {
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return new Date(dateString).toLocaleDateString("en-US", options);
+};
 </script>

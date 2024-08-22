@@ -7,5 +7,5 @@
   </div>
 </template>
 <script setup>
-import Clipping from "~/components/news/mentions.vue";
+import Clipping from "~/components/news/mentions_gs.vue";
 </script>

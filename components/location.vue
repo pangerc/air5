@@ -10,7 +10,7 @@
       luminaries responsible for leading and innovating some of the most
       world-renowned cable, wireless and technology companies.
     </p>
-    <img src="/img/map.png" alt="Map" class="w-full mt-12 lg:mt-24 px-4" />
+    <img src="/img/map2.png" alt="Map" class="w-full mt-12 lg:mt-24 px-4" />
     <div class="md:flex justify-between w-full mx-4 text-center mt-6 space-y-6">
       <article>
         <div class="text-sm text-lime font-n27">Company Headquarters</div>

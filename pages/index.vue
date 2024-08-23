@@ -63,7 +63,7 @@ const advisory = ref([
   },
   {
     name: "Vish Mishra",
-    role: "Advisor",
+    role: "Senior Advisor",
     imageUrl: "/team/vish.png",
     bio: "considered one of the top 10 influencers in Silicon Valley (San Jose Mercury News).  Through his 40+ year run in the venture capital industry, Vish’s investment record and his advice for companies is unparalleled.  Vish currently serves as Mnanaging Director for BlueVine Ventures and General Partner and Venture Director for Clearstone Venture Partner.",
     linkedinUrl: "https://www.linkedin.com/in/vishmishra/",

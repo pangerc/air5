@@ -42,7 +42,7 @@ import Statement from "~/components/statement.vue";
 import Why5G from "~/components/why5g.vue";
 import Footer from "~/components/footer.vue";
 import Team from "~/components/team.vue";
-import Location from "~/components/location.vue";
+import Location from "~/components/paloalto.vue";
 import Releases from "~/components/news/releases.vue";
 import Mentions from "~/components/news/mentions_gs.vue";
 

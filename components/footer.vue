@@ -3,7 +3,8 @@
     <div
       class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8"
     >
-      <div class="flex justify-center space-x-6 md:order-2">
+      <div class="flex justify-center items-end space-x-6 md:order-2">
+        <span class="text-xs text-gray-500 font-n27">Follow us on</span>
         <a
           v-for="item in navigation"
           :key="item.name"
@@ -14,7 +15,9 @@
           <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
         </a>
       </div>
-      <div class="mt-8 md:order-1 md:mt-0">
+      <div
+        class="mt-8 md:order-1 md:mt-0 flex items-end justify-center md:justify-start"
+      >
         <p class="text-center text-xs leading-5 text-gray-500">
           &copy; 2024 AIR5, Inc. All rights reserved.
         </p>

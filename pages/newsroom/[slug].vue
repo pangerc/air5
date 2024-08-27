@@ -143,11 +143,12 @@ const post = ref({
 `,
 });
 </script>
+
 <style scoped>
-p {
+:deep(p) {
   @apply mb-2;
 }
-a {
+:deep(a) {
   @apply text-lime hover:text-white;
 }
 </style>

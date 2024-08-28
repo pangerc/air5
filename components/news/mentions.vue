@@ -21,7 +21,9 @@
         >
           <a :href="post.href" class="hover:text-lime">
             <span class="absolute inset-0" />
-            {{ post.title }}
+            <span :class="titleClass">
+              {{ post.title }}
+            </span>
           </a>
         </h3>
         <p class="mt-1 line-clamp-3 text-sm leading-6 text-gray-300">
@@ -90,5 +92,8 @@ const displayedPosts = computed(() => {
 
 const showReadMore = computed(() => {
   return posts.value.length > props.limit;
+});
+const titleClass = computed(() => {
+  return showReadMore.value ? "line-clamp-2" : "";
 });
 </script>

@@ -26,9 +26,9 @@ export default defineEventHandler(async (event) => {
   }));
 
   // Sort the mentions array in reverse chronological order
-  mentions.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  // mentions.sort(
+  //   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  // );
 
   return mentions;
 });

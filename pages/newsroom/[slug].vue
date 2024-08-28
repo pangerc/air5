@@ -9,6 +9,16 @@
       <time :datetime="post.datetime">{{ post.date }}</time>
     </div>
     <div class="text-gray-300" v-html="post.content"></div>
+
+    <p v-if="post.externalURL" class="pt-12 flex items-center">
+      Read it on &nbsp;
+      <a
+        :href="post.externalURL"
+        class="flex items-center text-lime text-sm cursor-pointer"
+        >{{ post.externalPublication
+        }}<img src="/img/arrow_up.svg" class="w-3 h-3 ml-1"
+      /></a>
+    </p>
   </div>
 </template>
 
@@ -24,6 +34,9 @@ const post = ref({
   date: "Aug 22, 2024",
   datetime: "2024-08-22",
   location: "Palo Alto",
+  externalURL:
+    "https://www.businesswire.com/news/home/20240822891997/en/Air5™-Announces-5G-Standards-Based-Architecture-Designed-for-Cable-and-Wireless-Operators-to-Harmonize-Broadband-Ecosystems-Jeff-Brown-as-CEO-and-World-Renowned-Technology-Team",
+  externalPublication: "Business Wire",
   content: `<p class="italic">Patent-pending 5G-standards-based solution to empower the next wave of innovation for cable operators, aid in customer growth and retention, and forge alignment with technology that is driving the mobile ecosystem for wireless operators.</p>
             <p class="italic">New architecture development is led by Air5 co-founders, Jan Uddenfeldt and Lorenz Glatz, technologists behind the design of today's leading technology standards used across the wireless and cable industries.</p>
             <p>

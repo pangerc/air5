@@ -3,7 +3,7 @@
     <article
       v-for="post in displayedPosts"
       :key="post.url"
-      class="flex max-w-xl flex-col items-start justify-between mb-8"
+      class="flex max-w-xl flex-col items-start justify-between mb-6"
     >
       <div class="flex items-center gap-x-4 text-xs">
         <time :datetime="post.date" class="text-gray-500">{{
@@ -12,7 +12,7 @@
       </div>
       <div class="group relative">
         <h3
-          class="mt-3 text-base font-medium leading-6 text-gray-300 group-hover:text-gray-600"
+          class="mt-1 text-base font-medium leading-6 text-gray-300 group-hover:text-gray-600"
         >
           <a
             :href="post.url"
@@ -25,7 +25,7 @@
           </a>
         </h3>
         <div
-          class="font-light text-xs text-gray-300 mt-3 uppercase italic flex"
+          class="font-light text-xs text-gray-300 mt-2 uppercase italic flex"
         >
           {{ post.publication }}
           <img src="/img/arrow_up_w.svg" class="w-3 h-3 ml-1" />

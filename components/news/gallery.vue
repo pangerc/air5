@@ -62,6 +62,12 @@ const files = ref([
     thumbnail: "/media/jeff_thumb.jpg",
   },
   {
+    title: "Air5 tech diagram",
+    format: "PNG",
+    source: "/media/air5tech.png",
+    thumbnail: "/media/air5tech_thumb.png",
+  },
+  {
     title: "AIR5 logo, white and lime",
     format: "SVG",
     source: "/media/logo/Air5_143.svg",

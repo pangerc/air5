@@ -4,7 +4,7 @@
     <article
       v-for="post in posts"
       :key="post.id"
-      class="flex max-w-2xl flex-col items-start justify-between"
+      class="flex max-w-2xl flex-col items-start justify-between mb-8"
     >
       <div class="flex items-center gap-x-1 text-xs text-gray-400">
         {{ post.location }},
@@ -36,6 +36,18 @@
 <script setup>
 const posts = [
   {
+    id: 2,
+    slug: "air5-appoints-raj-singh",
+    title:
+      "AIR5 APPOINTS PROLIFIC NETWORK AND SEMI-CONDUCTOR VETERAN, RAJ SINGH, TO ITS ADVISORY BOARD OF WIRELESS AND CABLE INDUSTRY TECHNOLOGY LEADERS",
+    description:
+      "Singh brings decades of revolutionary technology design, products and companies resulting in multibillion dollar exits to Google, Cisco and more.",
+
+    date: "Sep 17, 2024",
+    datetime: "2024-09-17",
+    location: "Palo Alto",
+  },
+  {
     id: 1,
     slug: "air5-announces-5g-standards-based-architecture",
     title:
@@ -47,6 +59,7 @@ const posts = [
     datetime: "2024-08-22",
     location: "Palo Alto",
   },
+
   // More posts...
 ];
 </script>

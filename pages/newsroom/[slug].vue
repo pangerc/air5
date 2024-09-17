@@ -1,24 +1,27 @@
 <!-- pages/newsroom/press-releases/[slug].vue -->
 <template>
-  <div v-if="post" class="container max-w-3xl mx-auto pt-12 pb-32">
-    <h1 class="text-2xl italic font-n27 text-white mb-4">
-      {{ post.title }}
-    </h1>
-    <div class="flex items-center gap-x-1 text-xs text-gray-400 mb-4">
-      {{ post.location }},
-      <time :datetime="post.datetime">{{ post.date }}</time>
-    </div>
-    <div class="text-gray-300" v-html="post.content"></div>
+  <div class="container max-w-3xl mx-auto pt-12 pb-32">
+    <template v-if="selectedPost">
+      <h1 class="text-2xl italic font-n27 text-white mb-4">
+        {{ selectedPost.title }}
+      </h1>
+      <div class="flex items-center gap-x-1 text-xs text-gray-400 mb-4">
+        {{ selectedPost.location }},
+        <time :datetime="selectedPost.datetime">{{ selectedPost.date }}</time>
+      </div>
+      <div class="text-gray-300" v-html="selectedPost.content"></div>
 
-    <p v-if="post.externalURL" class="pt-12 flex items-center">
-      Read it on &nbsp;
-      <a
-        :href="post.externalURL"
-        class="flex items-center text-lime text-sm cursor-pointer"
-        >{{ post.externalPublication
-        }}<img src="/img/arrow_up.svg" class="w-3 h-3 ml-1"
-      /></a>
-    </p>
+      <p v-if="selectedPost.externalURL" class="pt-12 flex items-center">
+        Read it on &nbsp;
+        <a
+          :href="selectedPost.externalURL"
+          class="flex items-center text-lime text-sm cursor-pointer"
+          >{{ selectedPost.externalPublication
+          }}<img src="/img/arrow_up.svg" class="w-3 h-3 ml-1"
+        /></a>
+      </p>
+    </template>
+    <p v-else class="text-white">Post not found.</p>
   </div>
 </template>
 
@@ -28,16 +31,18 @@ const { slug } = route.params;
 
 // In a real application, you'd fetch the post data based on the slug
 // For this example, we'll use dummy data
-const post = ref({
-  title:
-    "AIR5 ANNOUNCES 5G-STANDARDS-BASED ARCHITECTURE DESIGNED FOR CABLE AND WIRELESS OPERATORS TO HARMONIZE BROADBAND ECOSYSTEMS, JEFF BROWN AS CEO, AND WORLD-RENOWNED TECHNOLOGY TEAM",
-  date: "Aug 22, 2024",
-  datetime: "2024-08-22",
-  location: "Palo Alto",
-  externalURL:
-    "https://www.businesswire.com/news/home/20240822891997/en/Air5™-Announces-5G-Standards-Based-Architecture-Designed-for-Cable-and-Wireless-Operators-to-Harmonize-Broadband-Ecosystems-Jeff-Brown-as-CEO-and-World-Renowned-Technology-Team",
-  externalPublication: "Business Wire",
-  content: `<p class="italic">Patent-pending 5G-standards-based solution to empower the next wave of innovation for cable operators, aid in customer growth and retention, and forge alignment with technology that is driving the mobile ecosystem for wireless operators.</p>
+const posts = ref([
+  {
+    slug: "air5-announces-5g-standards-based-architecture",
+    title:
+      "AIR5 ANNOUNCES 5G-STANDARDS-BASED ARCHITECTURE DESIGNED FOR CABLE AND WIRELESS OPERATORS TO HARMONIZE BROADBAND ECOSYSTEMS, JEFF BROWN AS CEO, AND WORLD-RENOWNED TECHNOLOGY TEAM",
+    date: "Aug 22, 2024",
+    datetime: "2024-08-22",
+    location: "Palo Alto",
+    externalURL:
+      "https://www.businesswire.com/news/home/20240822891997/en/Air5™-Announces-5G-Standards-Based-Architecture-Designed-for-Cable-and-Wireless-Operators-to-Harmonize-Broadband-Ecosystems-Jeff-Brown-as-CEO-and-World-Renowned-Technology-Team",
+    externalPublication: "Business Wire",
+    content: `<p class="italic">Patent-pending 5G-standards-based solution to empower the next wave of innovation for cable operators, aid in customer growth and retention, and forge alignment with technology that is driving the mobile ecosystem for wireless operators.</p>
             <p class="italic">New architecture development is led by Air5 co-founders, Jan Uddenfeldt and Lorenz Glatz, technologists behind the design of today's leading technology standards used across the wireless and cable industries.</p>
             <p>
   Air5, a new Silicon Valley based technology company focused on aligning wired
@@ -154,7 +159,41 @@ const post = ref({
 </p>
 <p>Kayla McFarland <a href="mailto: kayla@arcade.io">kayla@arcade.io</a></p>
 `,
-});
+  },
+  {
+    slug: "air5-appoints-raj-singh",
+    title:
+      "AIR5 APPOINTS PROLIFIC NETWORK AND SEMI-CONDUCTOR VETERAN, RAJ SINGH, TO ITS ADVISORY BOARD OF WIRELESS AND CABLE INDUSTRY TECHNOLOGY LEADERS",
+    date: "Sep 18, 2024",
+    datetime: "2024-09-17",
+    location: "Palo Alto",
+    externalURL: "",
+    externalPublication: "Business Wire",
+    content: `<p class="italic">Singh brings decades of revolutionary technology design, products and companies resulting in multibillion dollar exits to Google, Cisco and more</p>
+<p>Air5, a new Silicon Valley-based technology company powering a shared future for cable and wireless networks, announced, today it has added accomplished network infrastructure, software, semi-conductor and enterprise platforms entrepreneur, Raj Singh to its <a href="http://www.air5.io/">advisory board</a>. Singh will join the company's distinguished group of renowned technologists and top executives from the finance, cable and wireless industries, including former C-level leaders from such companies as Cisco, Charter, Comcast, Motorola, Alphabet, Nest and AT&T.</p>
+<p>A seasoned Silicon Valley technologist, entrepreneur, venture capitalist and executive for multiple startups, Singh has founded and managed several venture-backed companies with the likes of Vinod Khosla and Promod Haque that sold for several billions to some of the biggest global leaders like Cisco and Google. His leadership spans more than three decades across such names as API management platform company, Apigee; incubator of wide area infrastructure startups, Comstellar Communications; semi-conductor company for routers and switches, StratumOne Communications; and Cerent, a high speed multiplexer for telecom infrastructure.</p>
+<p>Singh is co-author of a self-published textbook "Digital Design and Synthesis with Verilog HDL, widely used by chip designers and universities in the US.</p>
+<p>"Raj Singh brings an incredible track record of breakthrough products and companies responsible for transforming several pivotal technology segments, especially optical in the wide area network space. Raj, a brilliant engineer and among top ten movers and shakers in the enterprise technologies, is also a wonderful human being" said Vish Mishra, Air5 fellow advisory board member and VC at Clearstone Venture Partners with multibillion dollar exits. Mishra is considered one of the top 10 influencers in Silicon Valley and is a successful venture capitalist with more than 40 years' experience. "Air5 will benefit greatly from the operational knowledge, technology insights, vast network and exit prowess brought by Raj."</p>
+<p>"Air5 has the technology and leadership to accelerate and increase the accessibility of 5G benefits to cable and wireless companies and their customers," added Singh. "I am honored to join the advisory board of esteemed technologists and business visionaries, who with the Air5 team, will quickly advance a cohesive infrastructure for enhanced mobile, streaming and AI experiences."</p>
+<p>Air5 recently announced it has named wireless veteran Jeff Brown, its CEO and introduced its disruptive patent-pending 5G-standards-based network architecture that will, for the first time, effectively harmonize disparate broadband infrastructures. The innovative new concept allows a 5G-based network architecture to seamlessly share cable's hybrid fiber coaxial (HFC) infrastructure with the industry's current DOCSIS standard.</p>
+<p>According to the company, by aligning wireless and wired broadband networks into one cohesive 5G infrastructure, Air5's novel architecture will facilitate more innovative and interconnected mobile solutions and increase capabilities to achieve customer growth across wired and wireless ecosystems. The company also expects its new technology to bring faster speeds, higher levels of security, and allow current broadband systems an elegant migration path to Air5's architecture, while also making it easier to take advantage of advances in Artificial Intelligence already implemented in 5G technology.</p>
+<p><a href="http://www.air5.io/newsroom/library">Click here</a> for more details and visuals of the Air5 technology and how it works. For more information about Air5, visit <a href="http://www.air5.io">www.air5.io</a>, email <a href="mailto:info@air5.io">info@air5.io</a> or call <a href="tel:650-275-3045">650-275-3045</a>.</p>
+
+<p>About Air5 (air5.io)</p>
+<p>Originated in 2024 and based in Palo Alto, California, Air5 and its patent-pending 5G-standards- based architecture technology are harmonizing wireless and wired cable broadband ecosystems to offer a more vibrant and ubiquitous environment for the development of dynamic value-added mobile solutions and innovative strategies for customer retention and growth. The company is led by wireless pioneer and experienced CEO, Jeff Brown, and has brought together an impressive team of prominent global technologists and business luminaries responsible for leading and innovating some of the most world-renowned cable, wireless and technology companies.</p>  
+  <p>
+  For more information: Teresa Fausti
+  <a href="mailto:teresa@fausticommunications.com"
+    >teresa@fausticommunications.com</a
+  >
+</p>
+<p>Kayla McFarland <a href="mailto: kayla@arcade.io">kayla@arcade.io</a></p>`,
+  },
+]);
+// Select the correct post based on the slug
+const selectedPost = computed(() =>
+  posts.value.find((post) => post.slug === slug)
+);
 </script>
 
 <style scoped>

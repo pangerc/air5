@@ -28,7 +28,7 @@
       </div>
       <div class="w-full md:w-1/3 mt-6 md:mt-0">
         <h3 class="text-white mb-6 mx-4 md:mx-0">Media Mentions</h3>
-        <Mentions :limit="3" />
+        <Mentions :limit="4" />
       </div>
     </div>
   </section>

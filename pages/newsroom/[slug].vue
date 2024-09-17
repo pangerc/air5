@@ -167,7 +167,8 @@ const posts = ref([
     date: "Sep 18, 2024",
     datetime: "2024-09-17",
     location: "Palo Alto",
-    externalURL: "",
+    externalURL:
+      "https://www.businesswire.com/news/home/20240917770491/en/Air5™-Appoints-Prolific-Network-and-Semiconductor-Veteran-Raj-Singh-to-Its-Advisory-Board-of-Wireless-and-Cable-Industry-Technology-Leaders",
     externalPublication: "Business Wire",
     content: `<p class="italic">Singh brings decades of revolutionary technology design, products and companies resulting in multibillion dollar exits to Google, Cisco and more</p>
 <p>Air5, a new Silicon Valley-based technology company powering a shared future for cable and wireless networks, announced, today it has added accomplished network infrastructure, software, semi-conductor and enterprise platforms entrepreneur, Raj Singh to its <a href="http://www.air5.io/">advisory board</a>. Singh will join the company's distinguished group of renowned technologists and top executives from the finance, cable and wireless industries, including former C-level leaders from such companies as Cisco, Charter, Comcast, Motorola, Alphabet, Nest and AT&T.</p>

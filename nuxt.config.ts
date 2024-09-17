@@ -4,6 +4,9 @@ export default defineNuxtConfig({
     googleServiceAccountEmail: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
     googlePrivateKey: process.env.GOOGLE_PRIVATE_KEY,
     googleSheetId: process.env.GOOGLE_SHEET_ID,
+    public: {
+      gtagId: "G-3999FQYJGV",
+    },
   },
   app: {
     head: {
@@ -33,6 +36,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
+  plugins: ["~/plugins/gtag.client.js"],
   css: ["@/assets/css/main.css"],
   postcss: {
     plugins: {

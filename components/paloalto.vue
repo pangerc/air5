@@ -11,11 +11,11 @@
       world-renowned cable, wireless and technology companies.
     </p>
     <div
-      class="mt-12 lg:mt-24 flex justify-between items-end md:space-x-8 px-4"
+      class="mt-12 lg:mt-24 flex flex-col md:flex-row justify-between items-end md:space-x-8 px-4"
     >
       <img src="/img/map5.png" alt="Map" class="w-full md:w-3/4" />
 
-      <article class="w-full md:w-1/4">
+      <article class="w-full md:w-1/4 text-right md:text-left pt-5">
         <div class="text-sm text-lime font-n27">Company Headquarters</div>
         <div class="text-lg text-white font-medium">AIR5</div>
         <p class="pt-2">335 Bryant Street <br />Palo Alto, CA 94301</p>

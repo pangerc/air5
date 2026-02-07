@@ -44,7 +44,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import mentions from "~/assets/data/media-mentions.json";
 
 const props = defineProps({
   limit: {
@@ -53,22 +53,14 @@ const props = defineProps({
   },
 });
 
-const posts = ref([]);
-
-const { data: fetchedPosts, error } = await useFetch("/api/mentions");
-
-if (error.value) {
-  console.error("Error fetching mentions:", error.value);
-} else {
-  posts.value = fetchedPosts.value;
-}
+const posts = mentions;
 
 const displayedPosts = computed(() => {
-  return posts.value.slice(0, props.limit);
+  return posts.slice(0, props.limit);
 });
 
 const showReadMore = computed(() => {
-  return posts.value.length > props.limit;
+  return posts.length > props.limit;
 });
 
 const formatDate = (dateString) => {

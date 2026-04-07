@@ -34,6 +34,11 @@ export default defineNuxtConfig({
       ],
     },
   },
+  ssr: true,
+  nitro: {
+    preset: "netlify-static",
+  },
+
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   plugins: ["~/plugins/gtag.client.js"],
